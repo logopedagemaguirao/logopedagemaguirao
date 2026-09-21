@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import { UploadCloud } from 'lucide-react';
+import React, { useState } from 'react';
 import { useCustomImages } from '../context/CustomImageContext';
 
 export interface SafeImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
@@ -26,8 +25,7 @@ export const SafeImage = ({
   slotKey,
   ...props
 }: SafeImageProps) => {
-  const { getImageFor, uploadFile } = useCustomImages();
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  const { getImageFor } = useCustomImages();
   const customSrc = getImageFor(slotKey || src);
 
   const [attempt, setAttempt] = useState<number>(0);
@@ -72,43 +70,23 @@ export const SafeImage = ({
     }
   };
 
-  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const file = e.target.files[0];
-      await uploadFile(file, slotKey || src);
-    }
-  };
-
   const currentSrc = getSourceForAttempt(attempt);
 
   if (hasFailedAll || !currentSrc) {
     return (
       <div
         id={id}
-        onClick={() => fileInputRef.current?.click()}
-        className={`w-full ${aspectRatioClass} rounded-2xl bg-gradient-to-br from-[#F5ECDF] via-[#FBF8F3] to-[#EADFED] border border-[#EADFED] p-6 flex flex-col items-center justify-center text-center select-none shadow-sm group cursor-pointer hover:border-[#6E2F82] transition-all ${className}`}
-        title="Haz clic aquí para seleccionar tu foto desde tu móvil u ordenador"
+        className={`w-full ${aspectRatioClass} rounded-2xl bg-gradient-to-br from-[#F5ECDF] via-[#FBF8F3] to-[#EADFED] border border-[#EADFED] p-6 flex flex-col items-center justify-center text-center select-none shadow-sm ${className}`}
       >
-        <input
-          type="file"
-          ref={fileInputRef}
-          onChange={handleFileChange}
-          accept="image/*"
-          className="hidden"
-        />
-        <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#6E2F82] mb-3 border border-[#EADFED] group-hover:scale-105 transition-transform">
-          <UploadCloud className="w-6 h-6" />
+        <div className="w-12 h-12 rounded-2xl bg-white shadow-sm flex items-center justify-center text-[#6E2F82] mb-3 border border-[#EADFED]">
+          <span className="font-serif font-bold text-lg text-[#6E2F82]">GG</span>
         </div>
         <p className="font-serif font-bold text-sm text-[#3F1F4D] max-w-xs">
           {captionTitle || alt}
         </p>
         <p className="text-xs text-[#6E2F82] font-medium mt-1">
-          {captionSubtitle || 'Gema Guirao · Neurologopeda'}
+          {captionSubtitle || 'Gema Guirao · Neurologopeda Colegiada 30/695'}
         </p>
-        <span className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white group-hover:bg-[#6E2F82] text-[#6E2F82] group-hover:text-white text-xs font-semibold border border-[#B68FC1]/40 shadow-xs transition-colors">
-          <UploadCloud className="w-3.5 h-3.5" />
-          <span>Elegir foto aquí</span>
-        </span>
       </div>
     );
   }

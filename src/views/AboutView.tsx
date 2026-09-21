@@ -1,7 +1,6 @@
 import { PageRoute } from '../types';
 import { USER_ATTACHED_IMAGES } from '../data/userImages';
 import { SafeImage } from '../components/SafeImage';
-import { useCustomImages } from '../context/CustomImageContext';
 import {
   Calendar,
   ArrowRight,
@@ -12,8 +11,7 @@ import {
   Award,
   Sparkles,
   Images,
-  FolderHeart,
-  Camera
+  FolderHeart
 } from 'lucide-react';
 
 interface AboutViewProps {
@@ -21,7 +19,6 @@ interface AboutViewProps {
 }
 
 export const AboutView = ({ onNavigate }: AboutViewProps) => {
-  const { openUploadModal } = useCustomImages();
   const AGENDA_URL = 'https://calendar.app.google/Sk8VZ8WyWi6maxdN6';
 
   const BLOCKS = [
@@ -231,15 +228,6 @@ export const AboutView = ({ onNavigate }: AboutViewProps) => {
               Espacios diseñados para ofrecer un entorno cálido, profesional y adaptado a las necesidades de cada paciente en rehabilitación y estimulación.
             </p>
           </div>
-
-          <button
-            onClick={() => openUploadModal()}
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#F5ECDF] hover:bg-[#EADFED] text-[#6E2F82] text-xs font-semibold border border-[#B68FC1]/30 transition-all shrink-0 cursor-pointer shadow-2xs"
-            title="Subir o cambiar fotos de la consulta"
-          >
-            <Camera className="w-4 h-4" />
-            <span>Subir / Añadir mis fotos</span>
-          </button>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

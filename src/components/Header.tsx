@@ -8,7 +8,6 @@ import {
   Calendar, 
   ExternalLink, 
   Phone, 
-  Camera, 
   ShoppingCart, 
   MessageCircle, 
   Instagram, 
@@ -16,7 +15,6 @@ import {
   Linkedin 
 } from 'lucide-react';
 import { SERVICES } from '../data/servicesData';
-import { useCustomImages } from '../context/CustomImageContext';
 import { useShop } from '../context/ShopContext';
 
 interface HeaderProps {
@@ -28,7 +26,6 @@ export const Header = ({ currentRoute, onNavigate }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
-  const { openUploadModal } = useCustomImages();
   const { cartCount, openCart } = useShop();
 
   useEffect(() => {
@@ -475,18 +472,6 @@ export const Header = ({ currentRoute, onNavigate }: HeaderProps) => {
             </div>
 
             <div className="pt-2 space-y-2">
-              <button
-                id="mobile-cta-upload"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openUploadModal();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#EADFED]/70 border border-[#B68FC1]/40 text-[#6E2F82] font-semibold text-center text-sm shadow-sm"
-              >
-                <Camera className="w-4 h-4 text-[#6E2F82]" />
-                <span>📷 Subir mis fotos y logotipo</span>
-              </button>
-
               {/* Teléfono / WhatsApp Actions */}
               <div className="grid grid-cols-2 gap-2">
                 <a

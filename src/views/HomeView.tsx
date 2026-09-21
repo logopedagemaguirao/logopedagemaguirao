@@ -74,7 +74,7 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
       subtitle: 'Espacio adaptado para la máxima privacidad y confort'
     },
     materials: {
-      path: '/WhatsApp Image 2026-09-09 at 19.22.02 (1).jpeg',
+      path: USER_ATTACHED_IMAGES.materialesAdaptados.path,
       alt: 'Materiales terapéuticos y fonoaudiológicos',
       title: 'Materiales y Herramientas',
       subtitle: 'Estimulación del habla, articulación y deglución'
@@ -302,12 +302,12 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
             </a>
           </div>
 
-          {/* Galería Bento con fotos auténticas de Gema */}
+          {/* Galería Bento con fotos de la clínica y materiales */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
                 src={USER_ATTACHED_IMAGES.consultation.path}
-                alt="Gema Guirao en el despacho clínico"
+                alt="Despacho de Valoración CIMM Murcia"
                 slotKey="consultation"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -318,9 +318,9 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
-                src="/WhatsApp Image 2026-09-09 at 19.22.01 (1).jpeg"
-                alt="Gabinete y Espacio Asistencial"
-                slotKey="clinic"
+                src={USER_ATTACHED_IMAGES.espacioIntervencion.path}
+                alt="Espacio de Intervención Logopédica"
+                slotKey="espacio_intervencion"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
@@ -330,9 +330,9 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
-                src="/WhatsApp Image 2026-09-09 at 19.22.02 (1).jpeg"
-                alt="Materiales de terapia fonológica"
-                slotKey="therapy"
+                src={USER_ATTACHED_IMAGES.materialesAdaptados.path}
+                alt="Materiales Adaptados y Fonoaudiología"
+                slotKey="materiales_adaptados"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
@@ -342,9 +342,9 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
-                src="/WhatsApp Image 2026-09-09 at 19.22.01 (5).jpeg"
-                alt="Mesa de exploración clínica"
-                slotKey="clinic"
+                src={USER_ATTACHED_IMAGES.diagnosticoSeguimiento.path}
+                alt="Diagnóstico y Seguimiento Clínico"
+                slotKey="diagnostico_seguimiento"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
