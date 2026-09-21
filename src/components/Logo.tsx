@@ -12,11 +12,11 @@ export const Logo = ({ variant = 'header', className = '' }: LogoProps) => {
   const customLogo = getImageFor('logo');
 
   const logoCandidates = [
-    '/Mi_logo-sin fondo.png',
+    '/images/logo_oficial.jpg',
+    '/logo_oficial.jpg',
     '/Mi logo.jpeg',
-    '/Mi_logo.jpeg',
-    encodeURI('/Mi_logo-sin fondo.png'),
-    encodeURI('/Mi logo.jpeg')
+    '/Mi_logo-sin fondo.png',
+    '/logo.png'
   ];
   const [candidateIdx, setCandidateIdx] = useState(0);
   const [allFailed, setAllFailed] = useState(false);
@@ -37,18 +37,20 @@ export const Logo = ({ variant = 'header', className = '' }: LogoProps) => {
       className={`inline-flex items-center gap-3.5 select-none ${className}`}
     >
       {activeSrc ? (
-        <img
-          src={activeSrc}
-          alt="Logopeda Gema Guirao"
-          className={`${
-            variant === 'footer'
-              ? 'h-11 sm:h-12 w-auto brightness-0 invert opacity-95'
-              : variant === 'hero'
-              ? 'h-14 sm:h-16 w-auto'
-              : 'h-11 sm:h-12 w-auto'
-          } object-contain transition-transform`}
-          onError={handleImgError}
-        />
+        <div className={variant === 'footer' ? 'bg-white p-1 rounded-xl shadow-xs inline-flex items-center' : ''}>
+          <img
+            src={activeSrc}
+            alt="Logopeda Gema Guirao"
+            className={`${
+              variant === 'footer'
+                ? 'h-10 sm:h-11 w-auto rounded-lg'
+                : variant === 'hero'
+                ? 'h-14 sm:h-16 w-auto'
+                : 'h-11 sm:h-12 w-auto'
+            } object-contain transition-transform`}
+            onError={handleImgError}
+          />
+        </div>
       ) : (
         <>
           {/* Fallback exact vector representation of the brand symbol */}

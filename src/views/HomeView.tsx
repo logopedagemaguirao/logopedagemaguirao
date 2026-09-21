@@ -307,24 +307,24 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
                 src={USER_ATTACHED_IMAGES.consultation.path}
-                alt="Despacho de Valoración CIMM Murcia"
+                alt="Atención e Intervención con Pacientes en CIMM Murcia"
                 slotKey="consultation"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Despacho de Valoración CIMM</span>
+                <span className="text-white text-xs font-bold">Atención e Intervención</span>
               </div>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
-                src={USER_ATTACHED_IMAGES.espacioIntervencion.path}
-                alt="Espacio de Intervención Logopédica"
-                slotKey="espacio_intervencion"
+                src={USER_ATTACHED_IMAGES.despachoGema.path}
+                alt="Gabinete y Planificación Asistencial Gema Guirao"
+                slotKey="despacho"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Espacio de Intervención</span>
+                <span className="text-white text-xs font-bold">Gabinete de Consulta</span>
               </div>
             </div>
 
@@ -342,13 +342,13 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
-                src={USER_ATTACHED_IMAGES.diagnosticoSeguimiento.path}
-                alt="Diagnóstico y Seguimiento Clínico"
-                slotKey="diagnostico_seguimiento"
+                src={USER_ATTACHED_IMAGES.espacioIntervencion.path}
+                alt="Espacio Asistencial en CIMM Murcia"
+                slotKey="espacio_intervencion"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Diagnóstico y Seguimiento</span>
+                <span className="text-white text-xs font-bold">Espacio Clínico CIMM</span>
               </div>
             </div>
           </div>
