@@ -1,0 +1,8 @@
+{
+  "name": "Gema Guirao - Neurologopeda",
+  "description": "Consulta de logopedia y neurologopedia especializada. Evaluación e intervención clínica personalizada para niños y adultos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
