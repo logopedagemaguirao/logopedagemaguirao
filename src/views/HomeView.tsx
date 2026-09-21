@@ -786,10 +786,11 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
               <span className="font-semibold text-white/90">Mis redes sociales:</span>
               <div className="flex items-center gap-2">
                 <a
-                  href="https://www.instagram.com/gemaguirao_logopeda/"
+                  href="https://www.instagram.com/logopedagemaguirao/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-[#E1306C] text-white transition-all inline-flex items-center gap-1.5 font-bold"
+                  title="Instagram de Gema Guirao (@logopedagemaguirao)"
                 >
                   <Instagram className="w-3.5 h-3.5" />
                   <span>Instagram</span>

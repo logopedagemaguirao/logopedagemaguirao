@@ -138,13 +138,13 @@ export const ContactView = ({ onNavigate }: ContactViewProps) => {
                 </div>
                 <div className="flex flex-wrap items-center gap-2 pt-1">
                   <a
-                    href="https://www.instagram.com/gemaguirao_logopeda/"
+                    href="https://www.instagram.com/logopedagemaguirao/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white border border-[#EADFED] hover:border-[#E1306C] text-[#3F1F4D] hover:text-[#E1306C] text-xs font-semibold shadow-2xs transition-all"
                   >
                     <Instagram className="w-4 h-4 text-[#E1306C]" />
-                    <span>Instagram (@gemaguirao_logopeda)</span>
+                    <span>Instagram (@logopedagemaguirao)</span>
                   </a>
                   <a
                     href="https://www.facebook.com/gemaguirao.neurologopeda/"

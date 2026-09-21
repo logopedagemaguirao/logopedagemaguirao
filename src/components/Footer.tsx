@@ -41,12 +41,12 @@ export const Footer = ({ onNavigate }: FooterProps) => {
               <div className="flex items-center gap-2">
                 <a
                   id="footer-social-instagram"
-                  href="https://www.instagram.com/gemaguirao_logopeda/"
+                  href="https://www.instagram.com/logopedagemaguirao/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-xl bg-[#6E2F82]/50 hover:bg-[#E1306C] text-[#FBF8F3] hover:text-white border border-[#B68FC1]/30 transition-all flex items-center gap-1.5 text-xs font-medium"
-                  title="Instagram de Gema Guirao (@gemaguirao_logopeda)"
-                  aria-label="Instagram de Gema Guirao"
+                  title="Instagram de Gema Guirao (@logopedagemaguirao)"
+                  aria-label="Instagram de Gema Guirao (@logopedagemaguirao)"
                 >
                   <Instagram className="w-4 h-4" />
                   <span className="text-[11px]">Instagram</span>

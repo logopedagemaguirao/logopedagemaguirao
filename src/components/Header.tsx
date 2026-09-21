@@ -231,12 +231,12 @@ export const Header = ({ currentRoute, onNavigate }: HeaderProps) => {
           <div className="flex items-center border-l border-r border-[#EADFED] px-1 gap-0.5">
             <a
               id="header-social-instagram"
-              href="https://www.instagram.com/gemaguirao_logopeda/"
+              href="https://www.instagram.com/logopedagemaguirao/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-1.5 rounded-lg text-[#3F1F4D] hover:text-[#E1306C] hover:bg-[#E1306C]/10 transition-colors"
-              title="Instagram de Gema Guirao"
-              aria-label="Instagram de Gema Guirao"
+              title="Instagram de Gema Guirao (@logopedagemaguirao)"
+              aria-label="Instagram de Gema Guirao (@logopedagemaguirao)"
             >
               <Instagram className="w-4 h-4" />
             </a>
@@ -440,11 +440,12 @@ export const Header = ({ currentRoute, onNavigate }: HeaderProps) => {
               <div className="flex items-center gap-2">
                 <a
                   id="mobile-social-instagram"
-                  href="https://www.instagram.com/gemaguirao_logopeda/"
+                  href="https://www.instagram.com/logopedagemaguirao/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-xl bg-white border border-[#EADFED] text-[#E1306C] shadow-2xs"
-                  aria-label="Instagram de Gema Guirao"
+                  aria-label="Instagram de Gema Guirao (@logopedagemaguirao)"
+                  title="Instagram (@logopedagemaguirao)"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>
