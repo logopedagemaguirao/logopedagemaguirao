@@ -4,6 +4,7 @@ import { SERVICES } from '../data/servicesData';
 import { FAQS } from '../data/faqsData';
 import { USER_ATTACHED_IMAGES } from '../data/userImages';
 import { SafeImage } from '../components/SafeImage';
+import { TestimonialCarousel } from '../components/TestimonialCarousel';
 import {
   Calendar,
   ArrowRight,
@@ -75,8 +76,8 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
     },
     materials: {
       path: USER_ATTACHED_IMAGES.materialesAdaptados.path,
-      alt: 'Materiales terapéuticos y fonoaudiológicos',
-      title: 'Materiales y Herramientas',
+      alt: 'Materiales logopédicos adaptados y fonoaudiología',
+      title: 'Materiales Logopédicos',
       subtitle: 'Estimulación del habla, articulación y deglución'
     }
   };
@@ -228,7 +229,7 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
                           : 'text-[#3F1F4D] hover:bg-[#EADFED]/60'
                       }`}
                     >
-                      Materiales
+                      Materiales Logopédicos
                     </button>
                   </div>
 
@@ -238,7 +239,7 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
                       id="hero-main-photo"
                       src={heroPhotos[activePhotoTab].path}
                       alt={heroPhotos[activePhotoTab].alt}
-                      slotKey={activePhotoTab === 'materials' ? 'therapy' : (activePhotoTab === 'consultation' ? 'consultation' : 'portrait')}
+                      slotKey={activePhotoTab === 'materials' ? 'materiales_adaptados' : (activePhotoTab === 'consultation' ? 'consultation' : 'portrait')}
                       className="w-full h-full object-cover object-center transition-all duration-500"
                     />
 
@@ -306,49 +307,49 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
+                src={USER_ATTACHED_IMAGES.portrait.path}
+                alt="Gema Guirao - Neurologopeda Colegiada 30/695"
+                slotKey="portrait"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
+                <span className="text-white text-xs font-bold">Gema Guirao · Neurologopeda</span>
+              </div>
+            </div>
+
+            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
+              <SafeImage
                 src={USER_ATTACHED_IMAGES.consultation.path}
                 alt="Atención e Intervención con Pacientes en CIMM Murcia"
                 slotKey="consultation"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Atención e Intervención</span>
-              </div>
-            </div>
-
-            <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
-              <SafeImage
-                src={USER_ATTACHED_IMAGES.despachoGema.path}
-                alt="Gabinete y Planificación Asistencial Gema Guirao"
-                slotKey="despacho"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Gabinete de Consulta</span>
+                <span className="text-white text-xs font-bold">Intervención con Paciente</span>
               </div>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
                 src={USER_ATTACHED_IMAGES.materialesAdaptados.path}
-                alt="Materiales Adaptados y Fonoaudiología"
+                alt="Materiales Logopédicos y Fonoaudiología"
                 slotKey="materiales_adaptados"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Materiales Adaptados</span>
+                <span className="text-white text-xs font-bold">Materiales Logopédicos</span>
               </div>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#EADFED]/30 border border-[#EADFED] group">
               <SafeImage
-                src={USER_ATTACHED_IMAGES.espacioIntervencion.path}
-                alt="Espacio Asistencial en CIMM Murcia"
-                slotKey="espacio_intervencion"
+                src={USER_ATTACHED_IMAGES.despachoGema.path}
+                alt="Despacho de Consulta - CIMM Murcia"
+                slotKey="despacho"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#3F1F4D]/80 via-transparent to-transparent flex items-end p-3">
-                <span className="text-white text-xs font-bold">Espacio Clínico CIMM</span>
+                <span className="text-white text-xs font-bold">Despacho de Consulta</span>
               </div>
             </div>
           </div>
@@ -388,7 +389,7 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
                       : serv.slug === 'voz'
                       ? 'Voz Profesional'
                       : serv.slug === 'disfagia'
-                      ? 'Deglución Segura'
+                      ? 'Disfagia'
                       : serv.slug === 'terapia-miofuncional'
                       ? 'Miofuncional'
                       : serv.slug === 'lectoescritura'
@@ -579,7 +580,7 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
                   Ictus y afasia
                 </span>
                 <span className="px-2.5 py-1 rounded-lg bg-[#FBF8F3] border border-[#EADFED] text-[11px] font-semibold text-[#3F1F4D]">
-                  Disfagia (deglución)
+                  Disfagia
                 </span>
                 <span className="px-2.5 py-1 rounded-lg bg-[#FBF8F3] border border-[#EADFED] text-[11px] font-semibold text-[#3F1F4D]">
                   Voz profesional
@@ -601,7 +602,14 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
         </div>
       </section>
 
-      {/* 6. CONSULTA EN MURCIA & ONLINE (VISUAL & PRECISA) */}
+      {/* 6. CARRUSEL DE TESTIMONIOS Y EXPERIENCIAS REALES */}
+      <TestimonialCarousel
+        onNavigate={onNavigate}
+        whatsappUrl={WHATSAPP_URL}
+        agendaUrl={AGENDA_URL}
+      />
+
+      {/* 7. CONSULTA EN MURCIA & ONLINE (VISUAL & PRECISA) */}
       <section id="ubicacion-cimm-murcia" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-br from-white via-[#FBF8F3] to-[#F5ECDF]/60 rounded-3xl border-2 border-[#B68FC1]/40 p-6 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -609,9 +617,9 @@ export const HomeView = ({ onNavigate }: HomeViewProps) => {
             <div className="lg:col-span-5">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-white border border-[#EADFED] shadow-md">
                 <SafeImage
-                  src={USER_ATTACHED_IMAGES.consultation.path}
-                  alt="Consulta CIMM Murcia - Gema Guirao"
-                  slotKey="consultation"
+                  src={USER_ATTACHED_IMAGES.despachoGema.path}
+                  alt="Despacho de Consulta CIMM Murcia - Gema Guirao"
+                  slotKey="despacho"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-sm p-2.5 rounded-xl border border-[#EADFED] flex items-center justify-between text-xs">

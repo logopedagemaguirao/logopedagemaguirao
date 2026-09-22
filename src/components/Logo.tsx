@@ -12,6 +12,7 @@ export const Logo = ({ variant = 'header', className = '' }: LogoProps) => {
   const customLogo = getImageFor('logo');
 
   const logoCandidates = [
+    '/images/logo_oficial.png',
     '/images/logo_oficial.jpg',
     '/logo_oficial.jpg',
     '/Mi logo.jpeg',

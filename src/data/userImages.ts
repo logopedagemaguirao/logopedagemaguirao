@@ -9,24 +9,34 @@ export interface AttachedImage {
 
 export const USER_ATTACHED_IMAGES = {
   logo: {
-    filename: 'logo_oficial.jpg',
-    path: '/images/logo_oficial.jpg',
+    filename: 'Mi_logo-sin fondo.png',
+    path: '/images/logo_oficial.png',
     alt: 'Logotipo Oficial Gema Guirao - Neurologopeda'
   },
   portrait: {
-    filename: 'gema_portrait.jpg',
-    path: '/images/gema_portrait.jpg',
-    alt: 'Gema Guirao - Neurologopeda Colegiada 30/695'
+    filename: 'ChatGPT Image 9 sept 2026, 20_14_36.png',
+    path: '/images/consulta_cimm.png',
+    alt: 'Gema Guirao - Neurologopeda Colegiada en Intervención Clínica'
   },
   consultation: {
-    filename: 'consulta_cimm.jpg',
-    path: '/images/consulta_cimm.jpg',
-    alt: 'Gema Guirao en Consulta Clínica de Neurologopedia en CIMM Murcia'
+    filename: 'ChatGPT Image 9 sept 2026, 19_45_17.png',
+    path: '/images/gema_profesional.png',
+    alt: 'Gema Guirao - Atención e Intervención Clínica'
+  },
+  gemaProfesional: {
+    filename: 'ChatGPT Image 9 sept 2026, 20_11_11.png',
+    path: '/images/gema_portrait.png',
+    alt: 'Gema Guirao - Neurologopeda Colegiada 30/695'
+  },
+  gemaWhatsapp: {
+    filename: 'WhatsApp Image 2026-09-09 at 19.07.21.jpeg',
+    path: '/images/gema_whatsapp.jpg',
+    alt: 'Gema Guirao - Ejercicio Sanitario Asistencial'
   },
   despachoGema: {
-    filename: 'despacho_gema.jpg',
-    path: '/images/despacho_gema.jpg',
-    alt: 'Gema Guirao en su Gabinete de Consulta y Trabajo Clínico'
+    filename: 'despacho_cimm_murcia.jpg',
+    path: '/images/despacho_cimm_murcia.jpg',
+    alt: 'Despacho de Consulta y Trabajo Clínico CIMM Murcia'
   },
   espacioIntervencion: {
     filename: 'espacio_intervencion.jpg',
@@ -46,51 +56,43 @@ export const USER_ATTACHED_IMAGES = {
   gallery: [
     {
       id: 'gallery-portrait',
-      filename: 'gema_portrait.jpg',
-      path: '/images/gema_portrait.jpg',
+      filename: 'ChatGPT Image 9 sept 2026, 20_14_36.png',
+      path: '/images/consulta_cimm.png',
       title: 'Gema Guirao - Neurologopeda Colegiada',
       description: 'Colegiada Sanitaria Nº 30/695 con más de 10 años de experiencia clínica especializada.',
       category: 'portrait' as const
     },
     {
       id: 'gallery-consultation',
-      filename: 'consulta_cimm.jpg',
-      path: '/images/consulta_cimm.jpg',
+      filename: 'ChatGPT Image 9 sept 2026, 19_45_17.png',
+      path: '/images/gema_profesional.png',
       title: 'Atención e Intervención con Pacientes',
       description: 'Sesión clínica de neurorrehabilitación cognitiva y de la comunicación en CIMM Murcia.',
       category: 'clinic' as const
     },
     {
-      id: 'gallery-despacho',
-      filename: 'despacho_gema.jpg',
-      path: '/images/despacho_gema.jpg',
-      title: 'Gabinete y Planificación Asistencial',
-      description: 'Espacio de trabajo presencial adaptado para valoración personalizada y seguimiento.',
-      category: 'portrait' as const
+      id: 'gallery-profesional',
+      filename: 'ChatGPT Image 9 sept 2026, 20_11_11.png',
+      path: '/images/gema_portrait.png',
+      title: 'Gema Guirao - Práctica Clínica',
+      description: 'Enfoque terapéutico individualizado, cercano y basado en evidencia científica.',
+      category: 'clinic' as const
     },
     {
-      id: 'gallery-espacio-intervencion',
-      filename: 'espacio_intervencion.jpg',
-      path: '/images/espacio_intervencion.jpg',
-      title: 'Espacio de Intervención CIMM',
-      description: 'Ambiente tranquilo y acogedor para pacientes pediátricos y adultos.',
+      id: 'gallery-despacho',
+      filename: 'despacho_cimm_murcia.jpg',
+      path: '/images/despacho_cimm_murcia.jpg',
+      title: 'Despacho de Consulta CIMM Murcia',
+      description: 'Espacio de trabajo presencial adaptado para valoración personalizada y seguimiento.',
       category: 'clinic' as const
     },
     {
       id: 'gallery-materiales',
       filename: 'materiales_adaptados.jpg',
       path: '/images/materiales_adaptados.jpg',
-      title: 'Materiales Adaptados y Fonoaudiología',
+      title: 'Materiales Logopédicos',
       description: 'Recursos lúdicos y clínicos para articulación, deglución y lectoescritura.',
       category: 'material' as const
-    },
-    {
-      id: 'gallery-diagnostico',
-      filename: 'diagnostico_seguimiento.jpg',
-      path: '/images/diagnostico_seguimiento.jpg',
-      title: 'Diagnóstico y Seguimiento',
-      description: 'Evaluación rigurosa basada en evidencia y protocolos científicos.',
-      category: 'clinic' as const
     }
   ]
 };

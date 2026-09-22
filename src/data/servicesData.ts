@@ -94,8 +94,8 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'disfagia',
     slug: 'disfagia',
-    name: 'Deglución y disfagia',
-    shortTitle: 'Deglución y disfagia',
+    name: 'Disfagia',
+    shortTitle: 'Disfagia',
     summary:
       'Valoración clínica e intervención en dificultades para tragar, atendiendo especialmente a la seguridad, eficacia y funcionalidad de la deglución.',
     subtitle:

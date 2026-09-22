@@ -33,7 +33,7 @@ const SEO_MAP: Record<PageRoute, { title: string; description: string }> = {
     description: 'Valoración funcional y terapia vocal para disfonía, fatiga vocal, sobreesfuerzo y alteraciones neurológicas de la voz. Coordinación con ORL.'
   },
   disfagia: {
-    title: 'Deglución y Disfagia | Valoración Clínica de Seguridad y Eficacia - Gema Guirao',
+    title: 'Disfagia | Valoración Clínica de Seguridad y Eficacia - Gema Guirao',
     description: 'Atención prioritaria a la seguridad y eficacia en dificultades para tragar tras ictus, daño cerebral o patología neurológica.'
   },
   'terapia-miofuncional': {

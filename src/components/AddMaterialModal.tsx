@@ -263,7 +263,7 @@ export const AddMaterialModal: React.FC<AddMaterialModalProps> = ({
               >
                 <option value="lenguaje">Lenguaje y Habla Infantil</option>
                 <option value="neurologopedia">Neurologopedia y Daño Cerebral</option>
-                <option value="disfagia">Disfagia y Deglución</option>
+                <option value="disfagia">Disfagia</option>
                 <option value="voz">Voz y Técnica Vocal</option>
                 <option value="miofuncional">Terapia Miofuncional</option>
                 <option value="lectoescritura">Lectoescritura</option>

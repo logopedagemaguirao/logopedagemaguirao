@@ -139,7 +139,7 @@ export const MATERIAL_CATEGORIES = [
   { id: 'all', label: 'Todos los Materiales', icon: '✨' },
   { id: 'neurologopedia', label: 'Neurologopedia y Daño Cerebral', icon: '🧠' },
   { id: 'lenguaje', label: 'Lenguaje y Habla Infantil', icon: '🎨' },
-  { id: 'disfagia', label: 'Disfagia y Deglución', icon: '🥣' },
+  { id: 'disfagia', label: 'Disfagia', icon: '🥣' },
   { id: 'voz', label: 'Voz y Técnica Vocal', icon: '🎙️' },
   { id: 'miofuncional', label: 'Terapia Miofuncional', icon: '👅' },
   { id: 'evaluacion', label: 'Evaluación y Recursos Gratuitos', icon: '📋' }

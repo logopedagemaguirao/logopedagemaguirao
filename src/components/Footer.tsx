@@ -197,7 +197,7 @@ export const Footer = ({ onNavigate }: FooterProps) => {
                   onClick={() => onNavigate('disfagia')}
                   className="hover:text-white transition-colors"
                 >
-                  Deglución y disfagia
+                  Disfagia
                 </button>
               </li>
               <li>

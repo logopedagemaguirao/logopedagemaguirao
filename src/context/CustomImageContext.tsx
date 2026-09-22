@@ -145,11 +145,17 @@ export function CustomImageProvider({ children }: { children: ReactNode }) {
     if (lower.includes('logo')) {
       keys.push('logo', 'Mi_logo-sin fondo.png', 'Mi logo.jpeg');
     }
+    if (lower.includes('19_45_17') || lower.includes('practica')) {
+      keys.push('practice', 'gemaProfesional', 'ChatGPT Image 9 sept 2026, 19_45_17.png');
+    }
     if (lower.includes('20_11_11') || lower.includes('20_11_58') || lower.includes('retrato')) {
-      keys.push('portrait', 'ChatGPT Image 9 sept 2026, 20_11_11 (1).png', 'ChatGPT Image 9 sept 2026, 20_11_58.png');
+      keys.push('portrait', 'ChatGPT Image 9 sept 2026, 20_11_11 (1).png', 'gema_portrait.jpg', 'gema_portrait.png');
     }
     if (lower.includes('20_14_36') || lower.includes('consulta')) {
       keys.push('consultation', 'ChatGPT Image 9 sept 2026, 20_14_36.png');
+    }
+    if (lower.includes('19.07.21') || lower.includes('whatsapp') || lower.includes('clinica')) {
+      keys.push('whatsapp', 'WhatsApp Image 2026-09-09 at 19.07.21.jpeg', 'gema_whatsapp.jpg');
     }
     if (lower.includes('19.22.02') || lower.includes('material')) {
       keys.push('WhatsApp Image 2026-09-09 at 19.22.02 (1).jpeg', 'clinic-wa-therapy-materials');

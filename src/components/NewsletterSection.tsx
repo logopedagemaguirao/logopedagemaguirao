@@ -52,7 +52,7 @@ export const NewsletterSection: React.FC<NewsletterSectionProps> = ({
   const availableTopics = [
     { id: 'neuro', label: 'Neurologopedia y Daño Cerebral', icon: '🧠' },
     { id: 'voz', label: 'Salud Vocal y Prevención', icon: '🗣️' },
-    { id: 'disfagia', label: 'Disfagia y Deglución Segura', icon: '🍽️' },
+    { id: 'disfagia', label: 'Disfagia', icon: '🍽️' },
     { id: 'infantil', label: 'Desarrollo del Lenguaje y Habla', icon: '🌱' }
   ];
 
